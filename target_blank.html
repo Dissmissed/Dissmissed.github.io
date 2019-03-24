@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>target="_blank" attack check</title>
+<!-- Hackerone-user: Dissmissed -->
+<h1>Please check the previous tab: can you see the hackerone page?</h1>
+<script>
+	if (window.opener) {
+		opener.location = 'https://hackerone.com';
+	} else {
+		document.querySelector('h1').innerHTML = 'The previous tab is safe, well done!';
+	}
+</script>
